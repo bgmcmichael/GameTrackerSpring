@@ -99,7 +99,7 @@ public class GameTrackerController {
         System.out.println("Searching by ..." + search);
         List<Game> gameList = games.findByNameStartsWith(search);
         model.addAttribute("games", gameList);
-        return "home";
+        return "redirect:/";
     }
 
     @RequestMapping(path = "/delete", method = RequestMethod.GET)
